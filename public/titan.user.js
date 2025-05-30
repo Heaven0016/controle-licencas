@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cadeira de Rodas pro Titan (Validação por Nome)
 // @namespace    http://tampermonkey.net/
-// @version      55.6
+// @version      55.7
 // @description  Script facilita a vida do programador nesse terminal.
 // @author       Heaven
 // @match        */albatros/admin.php*seccion=titan_trabajos_ordenes*
