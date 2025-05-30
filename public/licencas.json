@@ -1,6 +1,12 @@
 {
   "usuarios": {
-    "Ryan_PC": { "validade": "2025-09-11" },
-    "maria_notebook": { "validade": "2025-06-20" }
+    "ryan": {
+      "validade": "2025-09-11",
+      "login": { "senha": "123" }
+    },
+    "maria": {
+      "validade": "2025-06-20",
+      "login": { "senha": "senha456" }
+    }
   }
 }
