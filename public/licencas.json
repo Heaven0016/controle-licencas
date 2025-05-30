@@ -1,13 +1,22 @@
 {
   "usuarios": {
     "Ryan": {
-      "validade": "2025-05-30"
+      "validade": "2025-11-15"
     },
     "Luis": {
-      "validade": "2025-06-20"
+      "validade": "2025-11-15"
     },
     "Dlleon": {
-      "validade": "2025-07-15"
+      "validade": "2025-11-15"
+    },
+    "Danthon": {
+      "validade": "2025-11-15"
+    },
+    "Leandro": {
+      "validade": "2025-11-15"
+    },
+    "Vinicius": {
+      "validade": "2025-11-15"
     }
   }
 }
