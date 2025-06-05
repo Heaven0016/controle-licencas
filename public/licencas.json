@@ -1,7 +1,7 @@
 {
   "usuarios": {
     "Ryan": {
-      "validade": "2025-01-15"
+      "validade": "2025-11-15"
     },
     "Luis": {
       "validade": "2025-11-15"
@@ -15,8 +15,5 @@
     "Leandro": {
       "validade": "2025-11-15"
     },
-    "Vinicius": {
-      "validade": "2025-11-15"
-    }
   }
 }
