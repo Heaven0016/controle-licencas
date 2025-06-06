@@ -1,19 +1,24 @@
 {
-  "usuarios": {
-    "Ryan": {
-      "validade": "2025-11-15"
+  "perfis": {
+    "administrador": {
+      "senha": "toilM",
+      "validade": "2025-11-15",
+      "features": {
+        "maoDeObra": true,
+        "reprogramacao": true,
+        "execucao": true,
+        "fechamento": true
+      }
     },
-    "Luis": {
-      "validade": "2025-11-15"
-    },
-    "Dlleon": {
-      "validade": "2025-11-15"
-    },
-    "Danthon": {
-      "validade": "2025-11-15"
-    },
-    "Leandro": {
-      "validade": "2025-11-15"
+    "tecnico": {
+      "senha": "tecnicos",
+      "validade": "2025-11-15",
+      "features": {
+        "maoDeObra": false,
+        "reprogramacao": false,
+        "execucao": true,
+        "fechamento": false
+      }
     }
   }
 }
