@@ -14,7 +14,7 @@
       "senha": "tecnicos",
       "validade": "2025-11-15",
       "features": {
-        "maoDeObra": false,
+        "maoDeObra": true,
         "reprogramacao": false,
         "execucao": true,
         "fechamento": false
