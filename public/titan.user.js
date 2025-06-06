@@ -3,11 +3,11 @@
 // @namespace    http://tampermonkey.net/
 // @version      70.0
 // @description  Script facilita a vida do programador nesse terminal.
-// @author       Heaven
+// @author       Ryan
 // @match        */albatros/admin.php*seccion=titan_trabajos_ordenes*
 // @match        */albatros/admin.php*subseccion=reprogramar*
 // @updateURL    https://raw.githubusercontent.com/Heaven0016/controle-licencas/main/public/titan.user.js
-// @downloadURL  https://github.com/Heaven0016/controle-licencas/raw/refs/heads/main/public/titan.user.js
+// @downloadURL  https://raw.githubusercontent.com/Heaven0016/controle-licencas/main/public/titan.user.js
 // @grant        none
 // ==/UserScript==
 
