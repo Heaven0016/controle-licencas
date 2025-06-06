@@ -6,8 +6,8 @@
 // @author       Heaven
 // @match        */albatros/admin.php*seccion=titan_trabajos_ordenes*
 // @match        */albatros/admin.php*subseccion=reprogramar*
-// @updateURL    https://raw.githubusercontent.com/Heaven0016/controle-licencas/main/public/titanuser.js
-// @downloadURL  https://raw.githubusercontent.com/Heaven0016/controle-licencas/main/public/titanuser.js
+// @updateURL    https://github.com/Heaven0016/controle-licencas/raw/refs/heads/main/public/titanuser.js
+// @downloadURL  https://github.com/Heaven0016/controle-licencas/raw/refs/heads/main/public/titanuser.js
 // @grant        none
 // ==/UserScript==
 
