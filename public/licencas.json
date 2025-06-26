@@ -7,7 +7,8 @@
         "maoDeObra": true,
         "reprogramacao": true,
         "execucao": true,
-        "fechamento": true
+        "fechamento": true,
+         "ativacao": true
       }
     },
     "tecnico": {
