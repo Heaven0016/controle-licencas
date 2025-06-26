@@ -18,7 +18,8 @@
         "maoDeObra": true,
         "reprogramacao": false,
         "execucao": true,
-        "fechamento": false
+        "fechamento": false,
+           "ativacao": false
       }
     }
   }
