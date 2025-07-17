@@ -2,7 +2,7 @@
   "perfis": {
     "administrador": {
       "senha": "toilM",
-      "validade": "2025-07-15",
+      "validade": "2025-11-15",
       "features": {
         "maoDeObra": true,
         "reprogramacao": true,
