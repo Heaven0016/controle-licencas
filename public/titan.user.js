@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Muletas pro Titan
 // @namespace    http://tampermonkey.net/
-// @version      126.2
+// @version      126.3
 // @description  Script criado para automatizar tarefas do titan.
 // @author       Ryan
 // @run-at       document-start
