@@ -16,7 +16,7 @@
       "validade": "2025-10-23",
       "features": {
         "maoDeObra": true,
-        "reprogramacao": true,
+        "reprogramacao": false,
         "execucao": true,
         "fechamento": false,
            "ativacao": false
