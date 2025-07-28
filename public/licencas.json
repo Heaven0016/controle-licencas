@@ -2,7 +2,7 @@
   "perfis": {
     "administrador": {
       "senha": "toilM",
-      "validade": "2025-11-15",
+      "validade": "2025-10-23",
       "features": {
         "maoDeObra": true,
         "reprogramacao": true,
@@ -13,10 +13,10 @@
     },
     "tecnico": {
       "senha": "tecnicos",
-      "validade": "2025-11-15",
+      "validade": "2025-10-23",
       "features": {
         "maoDeObra": true,
-        "reprogramacao": false,
+        "reprogramacao": true,
         "execucao": true,
         "fechamento": false,
            "ativacao": false
