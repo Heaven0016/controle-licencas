@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         TitanFlow
+// @name         TitanFlow 🚀
 // @namespace    http://tampermonkey.net/
 // @version      130.0
 // @description  Otimiza e automatiza o fluxo de trabalho de Ordens de Serviço no sistema Titan, desde a criação até o fechamento.
