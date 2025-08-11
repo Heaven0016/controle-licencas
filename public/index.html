@@ -3,114 +3,375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TitanFlow 🚀</title>
+    <title>TitanFlow 🚀 Otimização para o Sistema Titan</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+        /* ==============================================
+        CSS Profissional com Variáveis e Animações
+        ==============================================
+        */
+
+        /* Variáveis de Cor para fácil customização */
+        :root {
+            --color-background: #121828;
+            --color-surface: #1B2133;
+            --color-primary: #8A42DE;
+            --color-primary-light: #A062EA;
+            --color-text-primary: #FFFFFF;
+            --color-text-secondary: #a0aec0;
+            --color-success: #27ae60;
+            --color-success-hover: #229954;
+            --font-family: 'Poppins', sans-serif;
+        }
+
+        /* Reset e Estilos Globais */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--color-background);
+            color: var(--color-text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        /* Animação de Fundo com Gradiente */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 10% 20%, rgba(138, 66, 222, 0.2), transparent 30%),
+                        radial-gradient(circle at 80% 90%, rgba(52, 152, 219, 0.2), transparent 30%);
+            animation: gradient-flow 20s ease-in-out infinite;
+        }
+
+        @keyframes gradient-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Cabeçalho "Hero" */
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            background: linear-gradient(90deg, var(--color-primary-light), #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--color-text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* Botão Principal de Instalação */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-success);
+            color: var(--color-text-primary);
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(39, 174, 96, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: var(--color-success-hover);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+        }
+
+        /* Barra de Informações Dinâmicas */
+        .info-bar {
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            gap: 40px;
+            padding: 20px;
+            background-color: rgba(27, 33, 51, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin: 60px 0;
+            backdrop-filter: blur(10px);
         }
-        .container {
-            max-width: 800px;
-            margin: 20px;
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-item .label {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-item .value {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .info-item .value.loading {
+            display: inline-block;
+            width: 80px;
+            height: 1.2rem;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* Seção de Funcionalidades */
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            font-weight: 600;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--color-surface);
             padding: 30px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            transform: translateY(0);
         }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-color: var(--color-primary);
+        }
+
+        .feature-card .icon {
             display: flex;
             align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+            border-radius: 50%;
+            margin-bottom: 20px;
         }
-        h1 .rocket {
-            font-size: 1.5em;
-            margin-right: 10px;
+        
+        .feature-card svg {
+            width: 28px;
+            height: 28px;
+            stroke: white;
         }
-        .install-button {
-            display: inline-block;
-            background-color: #27ae60;
-            color: #ffffff;
-            padding: 12px 25px;
-            font-size: 1.1em;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--color-text-primary);
         }
-        .install-button:hover {
-            background-color: #229954;
-            transform: translateY(-2px);
+
+        .feature-card p {
+            color: var(--color-text-secondary);
         }
-        .version-info {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #ecf0f1;
-            border-left: 5px solid #3498db;
-            border-radius: 5px;
-        }
-        .version-info code {
-            background-color: #bdc3c7;
-            padding: 3px 6px;
-            border-radius: 3px;
-        }
-        .changelog h3 {
-            color: #2980b9;
-        }
-        .changelog ul {
-            list-style-type: '✓  ';
-            padding-left: 20px;
-        }
+
+        /* Rodapé */
         footer {
             text-align: center;
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #7f8c8d;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--color-text-secondary);
         }
-        a {
-            color: #3498db;
-            text-decoration: none;
+        
+        /* Animações de Scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
-        a:hover {
-            text-decoration: underline;
+        
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsividade para Telas Menores */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1rem; }
+            .info-bar { flex-direction: column; gap: 20px; }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1><span class="rocket">🚀</span> TitanFlow</h1>
-        <p>Otimiza e automatiza o fluxo de trabalho de Ordens de Serviço no sistema Titan, desde a criação até o fechamento.</p>
+        
+        <header class="hero reveal">
+            <h1><span class="rocket">🚀</span> TitanFlow</h1>
+            <p>Sua suíte de automação para o sistema Titan. Otimize seu fluxo de trabalho, reduza cliques e ganhe tempo para o que realmente importa.</p>
+            <a href="titan.user.js" class="cta-button">Instalar a Versão Mais Recente</a>
+        </header>
 
-        <div class="version-info">
-            <p><strong>Versão Atual:</strong> <code>132.5</code></p>
-            <p>Para instalar, você precisa de uma extensão como <a href="https://www.tampermonkey.net/" target="_blank">Tampermonkey</a>.</p>
-        </div>
+        <main>
+            <section class="info-bar reveal">
+                <div class="info-item">
+                    <div class="label">Versão Atual</div>
+                    <div class="value loading" id="version-number">&nbsp;</div>
+                </div>
+                <div class="info-item">
+                    <div class="label">Última Atualização</div>
+                    <div class="value loading" id="last-updated">&nbsp;</div>
+                </div>
+                <div class="info-item">
+                    <div class="label">Pré-requisito</div>
+                    <div class="value"><a href="https://www.tampermonkey.net/" target="_blank">Tampermonkey</a></div>
+                </div>
+            </section>
 
-        <h2>Instalação</h2>
-        <p>Clique no botão abaixo para instalar ou atualizar o TitanFlow.</p>
-        <a href="titan.user.js" class="install-button">Instalar TitanFlow</a>
+            <section class="features">
+                <h2 class="reveal">Funcionalidades Principais</h2>
+                <div class="features-grid">
+                    
+                    <div class="feature-card reveal">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <h3>Automação Inteligente</h3>
+                        <p>Crie e emita pedidos em massa, adicione códigos de falha e redirecione para a próxima etapa do fluxo, tudo com um clique.</p>
+                    </div>
 
-        <div class="changelog">
-            <h3>Histórico de Versões</h3>
-            <ul>
-                <li><strong>v132.5:</strong> Implementação de segurança via Hash e melhorias na automação.</li>
-                <li><strong>v131.x:</strong> Adição da funcionalidade "Ordem Filha" e melhorias de UI.</li>
-                </ul>
-        </div>
+                    <div class="feature-card reveal">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                        </div>
+                        <h3>Painel de Controle</h3>
+                        <p>Uma interface de usuário limpa e moderna que se integra ao sistema Titan, com todas as ferramentas ao seu alcance e atalhos de teclado.</p>
+                    </div>
 
-        <footer>
-            Desenvolvido por Ryan © 2025
+                    <div class="feature-card reveal">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3>Acesso Seguro</h3>
+                        <p>O acesso ao script e às licenças é protegido por senha e criptografia, garantindo que apenas usuários autorizados utilizem a ferramenta.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="reveal">
+            <p>Desenvolvido por Ryan © 2025</p>
         </footer>
     </div>
+
+    <script>
+    // ==============================================
+    // JavaScript para Funcionalidades Dinâmicas
+    // ==============================================
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // --- Função para buscar e exibir dados do script ---
+        async function fetchScriptInfo() {
+            const versionEl = document.getElementById('version-number');
+            const updatedEl = document.getElementById('last-updated');
+            const scriptUrl = 'titan.user.js';
+
+            try {
+                const response = await fetch(scriptUrl);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                // Pega a data da última modificação do cabeçalho da resposta
+                const lastModified = response.headers.get('Last-Modified');
+                if (lastModified) {
+                    const date = new Date(lastModified);
+                    updatedEl.textContent = date.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+                    updatedEl.classList.remove('loading');
+                }
+
+                // Pega o conteúdo do script para extrair a versão
+                const scriptContent = await response.text();
+                const versionMatch = scriptContent.match(/@version\s+([\d.]+)/);
+                
+                if (versionMatch && versionMatch[1]) {
+                    versionEl.textContent = `v${versionMatch[1]}`;
+                    versionEl.classList.remove('loading');
+                }
+
+            } catch (error) {
+                console.error("Erro ao buscar informações do script:", error);
+                versionEl.textContent = 'Indisponível';
+                updatedEl.textContent = 'Indisponível';
+                versionEl.classList.remove('loading');
+                updatedEl.classList.remove('loading');
+            }
+        }
+
+        // --- Função para animar elementos ao rolar a página ---
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) { // Ativa a animação 100px antes de entrar na tela
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        // Executa as funções
+        fetchScriptInfo();
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Executa uma vez no carregamento inicial
+    });
+    </script>
 </body>
 </html>
