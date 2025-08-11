@@ -1,11 +1,116 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="pt-BR">
+<head>
     <meta charset="UTF-8">
-    <title>Licenças API</title>
-  </head>
-  <body>
-    <h1>API de Licenças em JSON</h1>
-    <p>Acesse o JSON em: <a href="licencas.json">licencas.json</a></p>
-  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitanFlow 🚀</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        h1 .rocket {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        .install-button {
+            display: inline-block;
+            background-color: #27ae60;
+            color: #ffffff;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+        .install-button:hover {
+            background-color: #229954;
+            transform: translateY(-2px);
+        }
+        .version-info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-left: 5px solid #3498db;
+            border-radius: 5px;
+        }
+        .version-info code {
+            background-color: #bdc3c7;
+            padding: 3px 6px;
+            border-radius: 3px;
+        }
+        .changelog h3 {
+            color: #2980b9;
+        }
+        .changelog ul {
+            list-style-type: '✓  ';
+            padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span class="rocket">🚀</span> TitanFlow</h1>
+        <p>Otimiza e automatiza o fluxo de trabalho de Ordens de Serviço no sistema Titan, desde a criação até o fechamento.</p>
+
+        <div class="version-info">
+            <p><strong>Versão Atual:</strong> <code>132.2</code></p>
+            <p>Para instalar, você precisa de uma extensão como <a href="https://www.tampermonkey.net/" target="_blank">Tampermonkey</a>.</p>
+        </div>
+
+        <h2>Instalação</h2>
+        <p>Clique no botão abaixo para instalar ou atualizar o TitanFlow.</p>
+        <a href="titan.user.js" class="install-button">Instalar TitanFlow</a>
+
+        <div class="changelog">
+            <h3>Histórico de Versões</h3>
+            <ul>
+                <li><strong>v132.2:</strong> Implementação de segurança via Hash e melhorias na automação.</li>
+                <li><strong>v131.x:</strong> Adição da funcionalidade "Ordem Filha" e melhorias de UI.</li>
+                </ul>
+        </div>
+
+        <footer>
+            Desenvolvido por Ryan © 2025
+        </footer>
+    </div>
+</body>
 </html>
