@@ -14,7 +14,16 @@
         CSS Profissional com Variáveis e Animações
         ==============================================
         */
+       footer a {
+            color: inherit; /* Faz o link herdar a cor cinza do texto do rodapé */
+            font-weight: 600; /* Deixa seu nome um pouco mais destacado */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
+        footer a:hover {
+            color: var(--color-primary); /* Muda para a cor de destaque roxa ao passar o mouse */
+        }
         /* Variáveis de Cor para fácil customização */
         :root {
             --color-background: #121828;
@@ -304,8 +313,8 @@
             </section>
         </main>
         
-        <footer class="reveal">
-            <p>Desenvolvido por Ryan © 2025</p>
+        <footer>
+            <p>Desenvolvido por <a href="https://www.linkedin.com/in/ryangomes0016" target="_blank">Ryan</a> © 2025</p>
         </footer>
     </div>
 
