@@ -123,7 +123,6 @@
             font-weight: 600;
         }
 
-        /* --- Info Bar (Glassmorphism) --- */
         .info-bar {
             display: flex;
             justify-content: center;
@@ -167,7 +166,6 @@
             100% { opacity: 1; }
         }
 
-        /* --- Seção de Funcionalidades --- */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -240,7 +238,6 @@
             font-size: 1rem;
         }
 
-        /* --- Seção de Instalação --- */
         #installation { margin-top: 100px; }
         .installation-steps {
             max-width: 700px;
@@ -275,7 +272,6 @@
             text-decoration: none;
         }
 
-        /* --- Footer --- */
         footer {
             text-align: center;
             padding: 40px 0;
@@ -291,7 +287,6 @@
         }
         footer a:hover { color: var(--color-primary); }
         
-        /* --- Animação de Revelação --- */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -425,7 +420,6 @@
         const versionEl = document.getElementById('version-number');
         const updatedEl = document.getElementById('last-updated');
         
-        // --- 1. Busca a versão diretamente do script ---
         async function fetchScriptVersion() {
             try {
                 const response = await fetch('titan.user.js');
@@ -447,9 +441,7 @@
             }
         }
 
-        // --- 2. Busca a data da última atualização via API do GitHub (MÉTODO CORRIGIDO) ---
         async function fetchLatestCommitDate() {
-            // URL da API do GitHub para buscar o último commit do arquivo específico
             const apiUrl = 'https://api.github.com/repos/Heaven0016/controle-licencas/commits?path=public/titan.user.js&per_page=1';
             
             try {
@@ -459,7 +451,6 @@
                 }
                 const data = await response.json();
 
-                // Verifica se a resposta contém a informação do commit
                 if (data && data.length > 0 && data[0].commit.committer.date) {
                     const commitDate = new Date(data[0].commit.committer.date);
                     updatedEl.textContent = commitDate.toLocaleDateString('pt-BR', {
@@ -478,7 +469,6 @@
             }
         }
 
-        // --- 3. Lógica para animação de revelação ao rolar a página ---
         function revealOnScroll() {
             const reveals = document.querySelectorAll('.reveal');
             const windowHeight = window.innerHeight;
@@ -491,11 +481,10 @@
             });
         }
         
-        // --- Execução das funções ---
         fetchScriptVersion();
         fetchLatestCommitDate();
         window.addEventListener('scroll', revealOnScroll);
-        revealOnScroll(); // Executa uma vez no carregamento
+        revealOnScroll();
     });
     </script>
 </body>
